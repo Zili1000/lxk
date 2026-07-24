@@ -71,7 +71,7 @@ function populateLists(cfg) {
         <span class="bib-authors">${boldName(p.authors, cfg.name)}.</span>
         <span class="bib-title">"${p.title}."</span>
         <span class="bib-venue"><em>${p.venue}</em>, ${p.year}.</span>
-        <span class="bib-links">${Object.entries(p.links||{}).map(([k,v])=>`[<a href="${v}"${k==='pdf'?' target="_blank"':''}>${k.toUpperCase()}</a>]`).join(' ')}</span>
+        <span class="bib-links">${Object.entries(p.links||{}).map(([k,v])=>`[<a href="${v}" target="_blank">${k.toUpperCase()}</a>]`).join(' ')}</span>
       </li>`).join('');
   }
   const projCont = document.getElementById('cfg-projects');
