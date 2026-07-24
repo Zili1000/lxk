@@ -51,7 +51,7 @@ function populateSimpleFields(cfg) {
     if (key === 'role_university') el.textContent = `${cfg.role} in Computer Science, ${cfg.university}`;
     else if (cfg[key] !== undefined) el.textContent = cfg[key];
   });
-  if (cfg.name) document.title = `${cfg.name} | Academic Homepage`;
+  if (cfg.name) document.title = `${cfg.name}`;
   if (cfg.photo) {
     const av = document.querySelector('.hero-photo');
     if (av) av.innerHTML = `<img src="${cfg.photo}" alt="${cfg.name}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`;
